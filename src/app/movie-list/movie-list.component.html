@@ -17,9 +17,7 @@
                 <td class="td-name">{{movie.name}}</td>
                 <td class="td-description">{{movie.description}}</td>
                 <td>{{movie.director}}</td>
-                <td>{{movie.duration}}</td>
-
-
+                <td>{{movie.duration}} minutos</td>
                 <td><span *ngIf="movie.enable==true else disableMovie"><i class="fas fa-check-circle td-enable"></i></span></td>
                 <ng-template #disableMovie><i class="fas fa-times-circle td-disable"></i></ng-template>
 
