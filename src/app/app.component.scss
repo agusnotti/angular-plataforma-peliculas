@@ -1,0 +1,40 @@
+.logo img{
+    width: 100px
+}
+
+nav.nav-plataforma,
+.footer {
+    background-color: #5AF4ED;
+}
+
+.footer a{
+    color: burlywood;
+    font-size: 40px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 10px;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+}
+
+.btn-buscar{
+    border-radius: 5px;
+    background-color: burlywood;
+    color: antiquewhite;
+}
+
+.btn-buscar:hover{
+    background-color: rgb(231, 168, 86);
+}
+
+.nav-plataforma{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    font-size: larger;
+    font-weight: bolder;
+}

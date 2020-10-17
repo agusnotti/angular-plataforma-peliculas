@@ -1,26 +1,53 @@
 <h1>Lista de peliculas</h1>
 <div class="movies-list">
-    <ul>
-        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
-        <li>Titulo: {{movie.name}}</li>
-        <li>Descripcion: {{movie.description}}</li>
-        <li>Director: {{movie.director}}</li>
-        <li>Duracion: {{movie.duration}}</li>
-    </ul>
-    <ul>
-        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
-        <li>Titulo: {{movie.name}}</li>
-        <li>Descripcion: {{movie.description}}</li>
-        <li>Director: {{movie.director}}</li>
-        <li>Duracion: {{movie.duration}}</li>
-    </ul>
-    <ul>
-        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
-        <li>Titulo: {{movie.name}}</li>
-        <li>Descripcion: {{movie.description}}</li>
-        <li>Director: {{movie.director}}</li>
-        <li>Duracion: {{movie.duration}}</li>
-    </ul>
-    
-</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Portada</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Director</th>
+                <th>Duración</th>
+                <th>Disponible</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies">
+                <td class="td-img"><img [src]="movie.image" [alt]="movie.name"></td>
+                <td class="td-name">{{movie.name}}</td>
+                <td class="td-description">{{movie.description}}</td>
+                <td>{{movie.director}}</td>
+                <td>{{movie.duration}}</td>
 
+
+                <td><span *ngIf="movie.enable==true else disableMovie"><i class="fas fa-check-circle td-enable"></i></span></td>
+                <ng-template #disableMovie><i class="fas fa-times-circle td-disable"></i></ng-template>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- <ul>
+        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
+        <li>Titulo: {{movie.name}}</li>
+        <li>Descripcion: {{movie.description}}</li>
+        <li>Director: {{movie.director}}</li>
+        <li>Duracion: {{movie.duration}}</li>
+    </ul>
+    <ul>
+        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
+        <li>Titulo: {{movie.name}}</li>
+        <li>Descripcion: {{movie.description}}</li>
+        <li>Director: {{movie.director}}</li>
+        <li>Duracion: {{movie.duration}}</li>
+    </ul>
+    <ul>
+        <li><img [src]="movie.image" [alt]="movie.name" class="w-75"></li>
+        <li>Titulo: {{movie.name}}</li>
+        <li>Descripcion: {{movie.description}}</li>
+        <li>Director: {{movie.director}}</li>
+        <li>Duracion: {{movie.duration}}</li>
+    </ul> -->
+
+</div>

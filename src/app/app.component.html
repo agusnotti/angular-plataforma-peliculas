@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light nav-plataforma">
+    <a class="navbar-brand logo" href="#"><img src="../assets/img/logo.png" alt="logoPopCorn"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -7,58 +7,48 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Series</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                    Peliculas
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Animadas</a>
+                    <a class="dropdown-item" href="#">Fantasia</a>
+                    <a class="dropdown-item" href="#">Terror</a>
+                    <a class="dropdown-item" href="#">Romanticas</a>
+                    <a class="dropdown-item" href="#">Accion</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#">Contacto</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-buscar my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </div>
 </nav>
 
 <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-9">
             <app-movie-list></app-movie-list>
         </div>
-        <div class="col-4">
+        <div class="col-3">
             <h1>agregar a lista de pelis favoritas</h1>
         </div>
     </div>
 </div>
 
-
-
-
 <footer class="footer">
-    <div class="container">
-        <a href='#'><i class="fa fa-twitch fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-twitter fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-youtube-play fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-rss fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-vine fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
-        <a href='#'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
-    </div>
+    <a href='#'><i class="fab fa-twitch"></i></a>
+    <a href='#'><i class="fab fa-facebook-f"></i></a>
+    <a href='#'><i class="fab fa-twitter"></i></a>
+    <a href='#'><i class="fab fa-youtube"></i></a>
+    <a href='#'><i class="fab fa-whatsapp"></i></a>
 </footer>

@@ -6,3 +6,38 @@ ul{
     display: flex;
     flex-wrap: wrap;
 }
+
+tr td.td-img img{
+    width: 150px;
+}
+
+
+td.td-description{
+    font-size: small;
+    text-align: justify;
+    width: 250px;
+}
+
+th, td {
+    border-bottom: 1px solid rgb(179, 177, 177);
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    color: antiquewhite;
+    background-color: burlywood;
+}
+
+.td-enable,
+.td-disable{
+    font-size: 30px;
+}
+
+.td-disable{
+    color: red;
+}
+
+.td-enable{
+    color: rgb(32, 189, 97);
+}
