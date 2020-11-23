@@ -4,5 +4,5 @@ export interface Movie{
     director: string;
     duration: number;
     image: string;
-    enable: boolean;
+    subtitles: boolean;
 }
