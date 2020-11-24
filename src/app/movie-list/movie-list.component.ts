@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit {
       "subtitles":true
     },
     {
-      "name": "El Rey Leon",
+      "name": "El Rey León",
       "description": "Simba es el hijo del rey de los leones, Mufasa, y heredero de todo el reino. Pero cuando su padre es brutalmente asesinado por su tío Scar, decidirá huir, dejando vía libre para que su tío tome el puesto de su padre como líder de la manada. En su camino, Simba se encuentra con el suricato Timón y el jabalí Pumba, que le enseñarán a vivir la vida sin preocupaciones. Pero el joven león se verá obligado a decidir entre su vida libre de problemas o su destino como rey.",
       "director": "Jon Favreau",
       "duration": 180,
@@ -34,7 +34,7 @@ export class MovieListComponent implements OnInit {
       "subtitles":false
     },
     {
-      "name": "Valiente",
+      "name": "Brave",
       "description": "....",
       "director": "NN",
       "duration": 10,
@@ -50,7 +50,7 @@ export class MovieListComponent implements OnInit {
       "subtitles":true
     },
     {
-      "name": "Guason",
+      "name": "Joker",
       "description": "....",
       "director": "NN",
       "duration": 10,

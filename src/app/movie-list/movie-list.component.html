@@ -1,7 +1,7 @@
 <h1 class="title-movie-list">Lista de peliculas</h1>
 <div class="movies-container">
     <div *ngFor="let movie of movies" class="card movie-card">
-        <a href="">
+        <a [routerLink]="['/movie']">
             <div class="card-header text-center">
                 <img [src]="movie.image" [alt]="movie.name" class="img-responsive img-movie">
             </div>        
@@ -11,7 +11,7 @@
             <!-- <p class="card-text description-text"><span class="bold-text">Descripcion: </span> {{movie.description}}</p>
             <p><span class="bold-text">Director: </span>{{movie.director}}</p>
             <p><span class="bold-text">Duracion: </span>{{movie.duration}} minutos</p> -->
-            <p><span class="bold-text">Subtitulos: </span><span *ngIf="movie.subtitles==true else subtitlesMovie"><i class="fas fa-check-circle subtitles-true"></i></span></p>
+            <p><span class="bold-text">Subtítulos: </span><span *ngIf="movie.subtitles==true else subtitlesMovie"><i class="fas fa-check-circle subtitles-true"></i></span></p>
                 <ng-template #subtitlesMovie><i class="fas fa-times-circle subtitles-false"></i></ng-template>
 
             <div class="btns-cards"> 
