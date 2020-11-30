@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieDataService } from '../services/movie-data.service';
 import { Movie } from './Movie';
 
 @Component({
@@ -8,14 +9,19 @@ import { Movie } from './Movie';
 })
 export class MovieListComponent implements OnInit {
 
-  movies: Movie[] = [
+  movies: Movie[];
+
+
+
+  /* = [
     {
       "name": "Harry Potter y la Piedra Filosofal",
       "description": "Harry Potter es un huérfano que vive con sus desagradables tíos, los Dursley, y su repelente primo Dudley. Se acerca su undécimo cumpleaños y tiene pocas esperanzas de recibir algún regalo, ya que nunca nadie se acuerda de él. Sin embargo, pocos días antes de su cumpleaños, una serie de misteriosas cartas dirigidas a él y escritas con una estridente tinta verde rompen la monotonía de su vida: Harry es un mago y sus padres también lo eran.",
       "director": "Chris Columbus",
       "duration": 180,
       "image": "assets/img/hp.jpg",
-      "subtitles":true
+      "subtitles":true,
+      "like": true,
     },
     {
       "name": "El Rey León",
@@ -23,7 +29,8 @@ export class MovieListComponent implements OnInit {
       "director": "Jon Favreau",
       "duration": 180,
       "image": "assets/img/rl.jpg",
-      "subtitles":false
+      "subtitles":false,
+      "like": true,
     },
     {
       "name": "El Señor de los Anillos",
@@ -31,7 +38,8 @@ export class MovieListComponent implements OnInit {
       "director": "Peter Jackson",
       "duration": 180,
       "image": "assets/img/sa.jpg",
-      "subtitles":false
+      "subtitles":false,
+      "like": false,
     },
     {
       "name": "Brave",
@@ -39,7 +47,8 @@ export class MovieListComponent implements OnInit {
       "director": "NN",
       "duration": 10,
       "image": "assets/img/brave.jpg",
-      "subtitles":true
+      "subtitles":true,
+      "like": false,
     },
     {
       "name": "Pocahontas",
@@ -47,7 +56,8 @@ export class MovieListComponent implements OnInit {
       "director": "NN",
       "duration": 10,
       "image": "assets/img/pocahontas.png",
-      "subtitles":true
+      "subtitles":true,
+      "like": false,
     },
     {
       "name": "Joker",
@@ -55,7 +65,8 @@ export class MovieListComponent implements OnInit {
       "director": "NN",
       "duration": 10,
       "image": "assets/img/guason.jpg",
-      "subtitles":false
+      "subtitles":false,
+      "like": false,
     },
     {
       "name": "El Grinch",
@@ -63,14 +74,26 @@ export class MovieListComponent implements OnInit {
       "director": "NN",
       "duration": 10,
       "image": "assets/img/grinch.jpg",
-      "subtitles":true
+      "subtitles":true,
+      "like": false,
     }
-  ];
+  ]; */
 
 
-  constructor() { }
+  constructor(private movieService: MovieDataService) { 
+
+  }
 
   ngOnInit(): void {
+    this.movieService.getAll().subscribe(response=>{
+      this.movies = response;
+    })
   }
+
+  setLike(movie: Movie){
+    movie.like = !movie.like;
+  }
+
+
 
 }

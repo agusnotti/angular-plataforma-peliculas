@@ -1,4 +1,4 @@
-<h1 class="title-movie-list">Lista de peliculas</h1>
+<h1>Lista de peliculas</h1>
 <div class="movies-container">
     <div *ngFor="let movie of movies" class="card movie-card">
         <a [routerLink]="['/movie']">
@@ -11,13 +11,19 @@
             <!-- <p class="card-text description-text"><span class="bold-text">Descripcion: </span> {{movie.description}}</p>
             <p><span class="bold-text">Director: </span>{{movie.director}}</p>
             <p><span class="bold-text">Duracion: </span>{{movie.duration}} minutos</p> -->
-            <p><span class="bold-text">Subtítulos: </span><span *ngIf="movie.subtitles==true else subtitlesMovie"><i class="fas fa-check-circle subtitles-true"></i></span></p>
-                <ng-template #subtitlesMovie><i class="fas fa-times-circle subtitles-false"></i></ng-template>
+            <!-- <p><span class="bold-text">Subtítulos: </span><span *ngIf="movie.subtitles==true else subtitlesMovie"><i class="fas fa-check-circle subtitles-true"></i></span></p>
+                <ng-template #subtitlesMovie>
+                    <i class="fas fa-times-circle subtitles-false"></i>
+                </ng-template> -->
 
-            <div class="btns-cards"> 
-                <a href="#" class="btn btn-movie see-movie"><i class="far fa-eye"></i></a>
-                <a href="#" class="btn btn-movie"><i class="fas fa-plus"></i></a>
-            </div>
+            <button type="button" class="btn btn-light text-center btn-like" (click)="setLike(movie)" *ngIf="movie.like==true else likeMovie"><i class="far fa-heart"></i>Like</button>
+                <ng-template #likeMovie><button type="button" class="btn btn-light text-center btn-like" (click)="setLike(movie)"><i class="fas fa-heart"></i>UnLike</button></ng-template>
+        </div>
+        <div class="card-footer">            
+            <button type="button" class="btn btn-info d-flex btn-fav">
+                <div><i class="fas fa-plus-square mr-2 icon-agregar"></i></div>
+                Agregar a favoritos
+            </button>
         </div>
     </div>
 </div>

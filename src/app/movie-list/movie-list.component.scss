@@ -55,13 +55,20 @@
     background-color: rgb(12, 185, 185); 
 }
 
-.title-movie-list{
-    color: rgb(12, 185, 185);
-    margin-bottom: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
 a {
     text-decoration: none;
     color: black;
+}
+
+.icon-agregar{
+    color: burlywood;
+    font-size: 20px;
+}
+
+.btn-fav{
+    font-size: 75%;
+}
+
+.btn-like, .btn-like i{
+    color:#F40039;
 }
