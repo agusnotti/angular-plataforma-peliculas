@@ -8,14 +8,6 @@
         </a>
         <div class="card-body text-center">
             <h5 class="card-title"><span class="resaltado"></span> {{movie.name}}</h5>
-            <!-- <p class="card-text description-text"><span class="bold-text">Descripcion: </span> {{movie.description}}</p>
-            <p><span class="bold-text">Director: </span>{{movie.director}}</p>
-            <p><span class="bold-text">Duracion: </span>{{movie.duration}} minutos</p> -->
-            <!-- <p><span class="bold-text">Subtítulos: </span><span *ngIf="movie.subtitles==true else subtitlesMovie"><i class="fas fa-check-circle subtitles-true"></i></span></p>
-                <ng-template #subtitlesMovie>
-                    <i class="fas fa-times-circle subtitles-false"></i>
-                </ng-template> -->
-
             <button type="button" class="btn btn-light text-center btn-like" (click)="setLike(movie)" *ngIf="movie.like==true else likeMovie"><i class="far fa-heart"></i>Like</button>
                 <ng-template #likeMovie><button type="button" class="btn btn-light text-center btn-like" (click)="setLike(movie)"><i class="fas fa-heart"></i>UnLike</button></ng-template>
         </div>
