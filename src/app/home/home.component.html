@@ -3,9 +3,9 @@
         <app-estrenos-movies></app-estrenos-movies>
     </div>
     <div class="col-9">
-        <app-movie-list></app-movie-list>
+        <app-movie-list (movieEmitter)="AddFavorite($event)"></app-movie-list>
     </div>
     <div class="col-3">
-        <app-favorites-movies></app-favorites-movies>
+        <app-favorites-movies [(favorites)]="movies"></app-favorites-movies>
     </div>
 </div>

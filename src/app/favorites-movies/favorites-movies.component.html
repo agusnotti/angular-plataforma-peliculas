@@ -1,3 +1,23 @@
 <div class="favorites-movies text-center">
     <h2>Favoritas</h2>
 </div>
+
+<div>
+    <table class="table">
+        <tr *ngFor="let favorite of favorites"  class="fav-list"> 
+            <!-- class="fav-list d-flex" -->
+            <td colspan="2">
+                {{favorite.name}} 
+            </td>
+            <td>
+                <button type="button" class="btn btn-warning" (click)="deleteFavorite(favorite)">
+                    <i class="fas fa-times-circle subtitles-false"></i>
+                </button>
+            </td>
+            
+            
+        </tr>
+    </table>
+</div>
+
+
